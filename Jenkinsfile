@@ -1,12 +1,12 @@
 pipeline {
-    agent any
+    agent { label 'linux' }
 
     stages {
 
         stage('Code') {
             steps {
                 echo "Cloning Code..."
-                git 'https://github.com/YOUR-USERNAME/django-jenkins-demo.git'
+                git 'https://github.com/dtechpoint35-lab/django-jenkins-demo.git'
             }
         }
 
